@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Hotel Whatever", "pricePerNightInUSD": 100 },
+    { "id": 2, "name": "Hotel Whichever", "pricePerNightInUSD": 200 },
+    { "id": 3, "name": "Hotel Whoknowswhich", "pricePerNightInUSD": 300 },
+    { "id": 4, "name": "Hotel Whatelse", "pricePerNightInUSD": 400 },
+    { "id": 5, "name": "Hotel Something", "pricePerNightInUSD": 400 },
+    { "id": 6, "name": "Hotel Someotherthing", "pricePerNightInUSD": 400 }
+  ]
