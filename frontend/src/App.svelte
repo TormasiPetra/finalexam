@@ -46,16 +46,6 @@
     hotelSearch = null;
   };
 
-  /*   const searchByPrice = async (min: number | null, max: number | null) => {
-    const response = await getSearchedHotelsMinMax(min, max);
-    if (!response.success) {
-      searchSuccess = false;
-      return;
-    }
-    searchSuccess = true;
-    searchedHotels = response.data;
-    console.log(searchedHotels);
-  }; */
 </script>
 
 <section class="flex flex-col justify-center items-center w-screen">
@@ -121,10 +111,12 @@
       <h1 class="text-lg font-bold mb-4">{searchedHotels.length} results</h1>
         <div class=" flex flex-wrap gap-4">
           {#each searchedHotels as hotel}
-            <div class="card card-body">
-              <img class=" max-w-[200px] rounded-[18px] overflow-hidden" src={baseSrc + hotel.name + ensOfSrc} alt="hotel" />
-              {hotel.name}
-            </div>
+          <div class="card card-body max-w-[200px] p-0">
+            <img class=" max-w-[200px] rounded-[18px] overflow-hidden" src={baseSrc + hotel.name + ensOfSrc} alt="hotel" />
+            <div class="flex flex-col gap-1 my-2">
+            <h1 class="text-lg font-bold">{hotel.name}</h1>
+            <h2>{hotel.pricePerNightInUSD}/<span>night</span></h2></div>
+          </div>
           {/each}
         </div>
       {/if}
